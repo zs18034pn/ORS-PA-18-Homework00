@@ -1,9 +1,15 @@
+def validni_brojevi(x, y) :
+    if not x.isnumeric()or not y.isnumeric() :
+        return False
+    else:
+        return True
+
+
 korisnik_uneo_prvi = input("Unesite prvi broj: ")
 korisnik_uneo_drugi = input("Unesite drugi broj: ")
 
-if (not  korisnik_uneo_prvi.isnumeric()) or (not korisnik_uneo_drugi.isnumeric()) :
-    print("Niste uneli dobre brojeve")
-    quit()
+if not validni_brojevi(korisnik_uneo_prvi, korisnik_uneo_drugi) :
+    quit ("Brojevi nisu validni")
 
 
 korisnik_broj_prvi = int(korisnik_uneo_prvi)
